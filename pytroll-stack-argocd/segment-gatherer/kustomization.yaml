@@ -1,0 +1,13 @@
+## kustomization.yaml
+####Helm Chart####
+namespace: pytroll
+helmCharts:
+- name: segment-gatherer
+  repo: https://pytroll.github.io/pytroll-charts
+  version: 0.1.0
+  releaseName: segment-gatherer
+  namespace: pytroll
+  valuesFile: base/segment-gatherer/values.yml
+
+resources:
+- base/segment-gatherer/fci-eu-config.yaml
